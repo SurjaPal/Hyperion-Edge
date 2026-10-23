@@ -1,0 +1,30 @@
+{
+ "tau": 0.51,
+ "tau_safe": 0.95,
+ "heldout_safe_operating_point": {
+  "tau": 0.95,
+  "sensor_flagged_as_sensor": 0.257,
+  "process_wrongly_flagged_as_sensor": 0.0
+ },
+ "tune": {
+  "n_process": 17,
+  "n_sensor": 99,
+  "sensor_undetected": 37
+ },
+ "heldout": {
+  "n_process_files": 14,
+  "n_sensor_alarmed": 74,
+  "sensor_faults_not_alarmed": 38,
+  "AUC_top_share": 0.867,
+  "sensor_flagged_as_sensor": 0.919,
+  "process_wrongly_flagged_as_sensor": 0.429,
+  "median_top_share_sensor": 0.782,
+  "median_top_share_process": 0.494,
+  "per_kind_flagged": {
+   "stuck": 1.0,
+   "dropout": 1.0,
+   "spike": 0.864,
+   "drift": 0.85
+  }
+ }
+}

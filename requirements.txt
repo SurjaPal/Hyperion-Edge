@@ -1,0 +1,5 @@
+# Runtime dependencies (what backend/server.py actually needs)
+numpy>=1.26
+scikit-learn>=1.4
+onnxruntime>=1.18      # on the Snapdragon device use a QNN-enabled build (see docs/NPU_INTEGRATION.md)
+pillow>=10.0

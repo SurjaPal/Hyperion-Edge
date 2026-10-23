@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sentinel-Edge — Fleet Console</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">SENTINEL-EDGE</span>
+      <span class="brand-sub" id="provider-line">Offline-first fleet intelligence &middot; detecting compute backend&hellip;</span>
+    </div>
+    <div class="swarm-status" id="swarm-status">
+      <div class="swarm-stat">
+        <span class="swarm-stat-label">Model</span>
+        <span class="swarm-stat-value" id="model-version">v0</span>
+      </div>
+      <div class="swarm-stat">
+        <span class="swarm-stat-label">Fed. rounds</span>
+        <span class="swarm-stat-value" id="round-number">0</span>
+      </div>
+      <div class="swarm-stat">
+        <span class="swarm-stat-label">Sites online</span>
+        <span class="swarm-stat-value" id="sites-online">0/0</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="site-row" class="site-row"></section>
+
+    <section class="fed-section">
+      <div class="log-header"><h2>Federated learning controls</h2>
+        <span class="log-sub">Sites share model weights only. Updates carry HMAC-chained commitments; aggregation is by coordinate-wise median.</span></div>
+      <div id="fed-controls" class="fed-controls"></div>
+    </section>
+
+    <section class="log-section">
+      <div class="log-header">
+        <h2>Event log</h2>
+        <span class="log-sub">Anomaly detections + federated swarm syncs, most recent first</span>
+      </div>
+      <div id="event-log" class="event-log" role="log" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footnote">
+    Telemetry is a replay of real pump-testbed recordings (Skoltech SKAB, GPL-3.0, downloaded separately) from files never used
+    for tuning or pretraining; camera frames are replayed sample images. The provider names above are read from the running
+    process, so NPU appears only if the QNN provider genuinely loads. Results and limits: <code>docs/RESULTS.md</code>.
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

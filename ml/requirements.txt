@@ -1,0 +1,6 @@
+# Extra dependencies to reproduce the experiments in ml/ (docs/RESULTS.md)
+-r ../requirements.txt
+optuna>=3.6
+skl2onnx>=1.16
+onnx>=1.16
+pandas>=2.0

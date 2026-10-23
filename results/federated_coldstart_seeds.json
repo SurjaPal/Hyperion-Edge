@@ -1,0 +1,26 @@
+{
+ "30": {
+  "scratch_mean": 0.5654,
+  "scratch_std": 0.0071,
+  "fed_mean": 0.6262,
+  "fed_std": 0.0342,
+  "paired_diff_mean": 0.0608,
+  "paired_diff_se": 0.0164
+ },
+ "60": {
+  "scratch_mean": 0.6615,
+  "scratch_std": 0.0081,
+  "fed_mean": 0.6649,
+  "fed_std": 0.0211,
+  "paired_diff_mean": 0.0033,
+  "paired_diff_se": 0.0062
+ },
+ "120": {
+  "scratch_mean": 0.6953,
+  "scratch_std": 0.0145,
+  "fed_mean": 0.6991,
+  "fed_std": 0.0289,
+  "paired_diff_mean": 0.0038,
+  "paired_diff_se": 0.0163
+ }
+}

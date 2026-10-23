@@ -1,0 +1,2 @@
+Replace this folder's contents with real camera frames (.jpg/.png) from a site, or run
+scripts/fetch_assets.py to pull sample images for smoke-testing only (see THIRD_PARTY_NOTICES.md).

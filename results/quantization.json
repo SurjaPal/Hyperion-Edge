@@ -1,0 +1,33 @@
+{
+ "sklearn float32": {
+  "F1": 0.7485,
+  "FAR": 42.56,
+  "MAR": 17.85
+ },
+ "ONNX float32": {
+  "F1": 0.7485,
+  "FAR": 42.56,
+  "MAR": 17.85
+ },
+ "ONNX QDQ act=QUInt8": {
+  "F1": 0.7423,
+  "FAR": 45.54,
+  "MAR": 17.38
+ },
+ "ONNX QDQ act=QUInt16": {
+  "F1": 0.7426,
+  "FAR": 45.45,
+  "MAR": 17.38
+ },
+ "model_size_KB": {
+  "float32 KB": 9.7,
+  "QDQ QUInt8 KB": 9.4,
+  "QDQ QUInt16 KB": 9.9
+ },
+ "cpu_latency": {
+  "float32 CPU us/inference": 34.0,
+  "QDQ QUInt8 CPU us/inference": 61.6,
+  "QDQ QUInt16 CPU us/inference": 70.3
+ },
+ "note": "seed 0, 14 held-out files, CPU execution provider; measures quantization error only"
+}

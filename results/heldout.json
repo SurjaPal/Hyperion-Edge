@@ -1,0 +1,151 @@
+{
+ "selected_trial": 61,
+ "tune_F1": 0.8055,
+ "params": 2210,
+ "ae_cfg": {
+  "window": 8,
+  "hidden": [
+   16
+  ],
+  "bottleneck": 2,
+  "alpha": 0.03682964154601108,
+  "lr": 0.00017536874840506182,
+  "batch": 32,
+  "activation": "relu",
+  "epochs": 140,
+  "q": 0.9531625622215453,
+  "scale": 1.611343236443594,
+  "smooth": 9
+ },
+ "heldout_files": [
+  "other/3.csv",
+  "other/5.csv",
+  "other/7.csv",
+  "other/9.csv",
+  "other/11.csv",
+  "other/13.csv",
+  "valve1/2.csv",
+  "valve1/4.csv",
+  "valve1/6.csv",
+  "valve1/8.csv",
+  "valve1/10.csv",
+  "valve1/12.csv",
+  "valve1/14.csv",
+  "valve2/2.csv"
+ ],
+ "tune_files": [
+  "other/1.csv",
+  "other/4.csv",
+  "other/6.csv",
+  "other/8.csv",
+  "other/10.csv",
+  "other/12.csv",
+  "other/14.csv",
+  "valve1/1.csv",
+  "valve1/3.csv",
+  "valve1/5.csv",
+  "valve1/7.csv",
+  "valve1/9.csv",
+  "valve1/11.csv",
+  "valve1/13.csv",
+  "valve1/15.csv",
+  "valve2/1.csv",
+  "valve2/3.csv"
+ ],
+ "heldout": {
+  "AE tuned": {
+   "F1": [
+    0.7557,
+    0.0098
+   ],
+   "FAR": [
+    41.374,
+    2.2377
+   ],
+   "MAR": [
+    17.204,
+    1.6601
+   ],
+   "precision": [
+    0.6952,
+    0.0113
+   ],
+   "recall": [
+    0.828,
+    0.0166
+   ]
+  },
+  "AE default (untuned)": {
+   "F1": [
+    0.7638,
+    0.0109
+   ],
+   "FAR": [
+    38.578,
+    2.5747
+   ],
+   "MAR": [
+    17.262,
+    2.6581
+   ],
+   "precision": [
+    0.7097,
+    0.01
+   ],
+   "recall": [
+    0.8274,
+    0.0266
+   ]
+  },
+  "PCA (thresholds+k tuned)": {
+   "F1": [
+    0.6916,
+    0.0
+   ],
+   "FAR": [
+    34.63,
+    0.0
+   ],
+   "MAR": [
+    31.06,
+    0.0
+   ],
+   "precision": [
+    0.6939,
+    0.0
+   ],
+   "recall": [
+    0.6894,
+    0.0
+   ]
+  },
+  "IsolationForest (thresholds tuned)": {
+   "F1": [
+    0.5804,
+    0.0
+   ],
+   "FAR": [
+    16.48,
+    0.0
+   ],
+   "MAR": [
+    53.2,
+    0.0
+   ],
+   "precision": [
+    0.7639,
+    0.0
+   ],
+   "recall": [
+    0.468,
+    0.0
+   ]
+  }
+ },
+ "baseline_tune_F1": {
+  "pca": 0.8086,
+  "iforest": 0.6094
+ },
+ "ae_tuned_delay_median_s": 8.0,
+ "ae_tuned_missed_files": 0
+}

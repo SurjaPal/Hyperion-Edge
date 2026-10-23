@@ -1,0 +1,17 @@
+{
+ "window": 8,
+ "hidden": [
+  16
+ ],
+ "bottleneck": 2,
+ "alpha": 0.03682964154601108,
+ "activation": "relu",
+ "q": 0.9531625622215453,
+ "scale": 1.611343236443594,
+ "smooth": 9,
+ "sensor_triage_tau": 0.95,
+ "note": "Selected by multi-objective Optuna on TUNE files only; triage tau chosen on TUNE files (conservative operating point). See results/*.json.",
+ "lr": 0.00017536874840506182,
+ "epochs": 140,
+ "batch": 32
+}

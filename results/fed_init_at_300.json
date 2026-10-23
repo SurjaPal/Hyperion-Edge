@@ -1,0 +1,9 @@
+{
+ "n_local": 300,
+ "scratch_mean": 0.7513,
+ "scratch_std": 0.0084,
+ "fed_median_init_mean": 0.7406,
+ "fed_std": 0.0027,
+ "paired_diff": -0.0107,
+ "paired_se": 0.0041
+}

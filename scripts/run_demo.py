@@ -27,6 +27,6 @@ if __name__ == "__main__":
 
     import server  # backend/server.py
 
-    print(f"Starting Sentinel-Edge -- dashboard will open at {URL}")
+    print(f"Starting Hyperion-Edge -- dashboard will open at {URL}")
     Timer(1.5, _open_browser).start()
     server.main()

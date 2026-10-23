@@ -1,10 +1,10 @@
-# Sentinel-Edge
+# Hyperion-Edge
 
 Offline-first, federated anomaly detection for unmanned industrial sites (retail fuel outlets,
 warehouses, substations), built for Snapdragon-powered HP PCs and the Qualcomm Snapdragon® AI
 Lab Build & Present Challenge.
 
-One Sentinel-Edge node is designed to run entirely on-device at a site: it scores equipment
+One Hyperion-Edge node is designed to run entirely on-device at a site: it scores equipment
 telemetry through a small neural autoencoder, runs an open-source vision model (YOLOX-nano) on
 camera frames, explains flagged anomalies in terms of which measurements moved, and writes
 everything to a tamper-evident local log, with no connectivity required. When a link is

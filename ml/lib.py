@@ -1,5 +1,5 @@
 """
-Shared ML library for the Sentinel-Edge experiments.
+Shared ML library for the Hyperion-Edge experiments.
 
 Protocol (adapted from the public SKAB benchmark): each file is one experiment on a real
 centrifugal-pump testbed. The device sees the first N_TRAIN=400 samples of a run,

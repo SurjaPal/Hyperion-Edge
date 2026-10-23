@@ -1,5 +1,5 @@
 """
-real_node.py -- one Sentinel-Edge site replaying REAL pump-testbed telemetry (SKAB) at accelerated speed.
+real_node.py -- one Hyperion-Edge site replaying REAL pump-testbed telemetry (SKAB) at accelerated speed.
 
 Protocol (identical to the offline evaluation in ml/): rows [0,300) baseline learning, rows [300,400) alarm-threshold
 calibration on unseen normal data, rows >= 400 live scoring. The dataset's anomaly labels are used ONLY for the
@@ -38,7 +38,7 @@ class RealSiteNode:
         self.cycle = 0; self.tick_count = 0; self.total_alarms = 0
         self.pending_weights = None      # set after local training; consumed by the automatic swarm round
         self.latest_weights = None       # most recent locally trained weights (used by on-demand rounds)
-        self.ledger.append({"type": "boot", "detail": f"Sentinel-Edge node online for {site_id}", "data": self.csv_name})
+        self.ledger.append({"type": "boot", "detail": f"Hyperion-Edge node online for {site_id}", "data": self.csv_name})
         self._last_vision = None; self._last_vision_counts = None
         self._reset()
 

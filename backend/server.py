@@ -1,5 +1,5 @@
 """
-server.py -- Sentinel-Edge demo server (standard library only for the web layer).
+server.py -- Hyperion-Edge demo server (standard library only for the web layer).
 Replays REAL pump-testbed data (SKAB) at 16 rows/s through 3 simulated sites, runs the tuned autoencoder, and serves:
   GET  /api/state                    live JSON
   POST /api/tamper/<site>            corrupt one past ledger entry (tamper-detection demo)
@@ -19,8 +19,8 @@ from real_swarm import RealSwarm
 SITES = [("RO-KOL-014", "valve1/2.csv"), ("RO-DGP-007", "valve2/2.csv"), ("RO-SGR-022", "other/3.csv")]
 ROWS_PER_TICK, TICK_SECONDS = 4, 0.25
 DASHBOARD_DIR = os.path.join(ROOT, "dashboard")
-PORT = int(os.environ.get("SENTINEL_PORT", "8787"))
-HOST = os.environ.get("SENTINEL_HOST", "127.0.0.1")   # localhost only by default; demo control endpoints are unauthenticated
+PORT = int(os.environ.get("HYPERION_PORT", os.environ.get("SENTINEL_PORT", "8787")))
+HOST = os.environ.get("HYPERION_HOST", os.environ.get("SENTINEL_HOST", "127.0.0.1"))   # localhost only by default; demo control endpoints are unauthenticated
 
 _lock = threading.RLock()
 _state = {"sites": {}, "swarm": {}}
@@ -77,7 +77,7 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     threading.Thread(target=_loop, daemon=True).start()
-    print(f"Sentinel-Edge demo server running: http://localhost:{PORT}")
+    print(f"Hyperion-Edge demo server running: http://localhost:{PORT}")
     ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()
 
 
